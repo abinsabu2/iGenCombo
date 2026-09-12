@@ -1,0 +1,33 @@
+{
+  "profile": "kids_coloring_book_page",
+  "validated": "2026-09-12",
+  "generate": {
+    "width": 512,
+    "height": 640,
+    "steps": 4,
+    "guidance": 3.5,
+    "model": null
+  },
+  "prompt_template": "Toddler colouring book page. {SCENE}. Plain empty white background, no scenery, no landscape, no grass, no texture lines, no hatching, no cross-hatching, no stipple dots, no speckles, no wood grain. Extra-thick bold black outlines, pure white background, no shading, no grey, no color, minimal internal detail, huge empty white areas, flat vector sticker style.",
+  "postprocess": {
+    "threshold_default": 80,
+    "threshold_fallbacks": [65, 55, 45],
+    "despeckle_min_px": 45,
+    "fill_holes_max_px": 25
+  },
+  "qc": {
+    "ink_coverage_target": [0.10, 0.20],
+    "ink_coverage_reject_above": 0.32
+  },
+  "page": {
+    "canvas_px": [2550, 3300],
+    "dpi": 300,
+    "min_margin_px": 200
+  },
+  "avoid": {
+    "sizes": ["816x1056 (tiles the subject into a crowd)", "1024x1024 (black image)"],
+    "steps": [8, 20],
+    "guidance": [0, 5.5, 6],
+    "scene_words": ["river", "hills", "meadow grass", "cobblestones", "wood grain", "wool curls", "landscape"]
+  }
+}
